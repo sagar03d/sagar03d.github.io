@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>sagar.com</title>
+</head>
+<body><center>
+<div id="main">
+<h1>Ragistration</h1>
+<hr></hr><br><br>
+<form action="" method="post">
+Fisrt Name <input type="text" name="fname" id="fn" required><br><br>
+Last Name <input type="text" name="lname" id="ln" required><br><br>
+<div id="ad">Address <textarea rows="5" cols="20"></textarea></div><br><br>
+Password <input type="password" name="pass" id="pass" required><br><br>
+Skills<label><input type="checkbox" name="sk[]" id="c" value="C">C</label> 
+	<label><input type="checkbox" name="sk[]" id="cpp" value="CPP">C++</label>
+	<label><input type="checkbox" name="sk[]" id="php" value="PHP">PHP</label>
+	<label><input type="checkbox" name="sk[]" id="ios" value="IOS">IOS</label>
+	<label><input type="checkbox" name="sk[]" id="android" value="ANDROID">ANDROID</label><br><br>
+Gender <label><input type="radio" name="gen" id="m" value="male">Male</label>
+	<label><input type="radio" name="gen" id="f" value="female">Female</label>
+	<label><input type="radio" name="gen" id="o" value="other">Other</label><br><br>
+City <select name="city" id="city">
+<option value="">Select</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Delhi">Delhi</option>
+<option value="Pune">Pune</option>
+<option value="Chennai">Chennai</option>
+<option value="Kolkata">Kolkata</option>
+</select><br><br>
+Upload <input type="file" name="filename" id="upload"><br><br>
+<input type="submit" name="sbmit" id="sub" value="Submit">
+<input type="reset" name="res" id="rest" value="Reset">
+</form>
+</div>
+</center>
+<style>
+#main{
+	margin-right: 100px;
+	line-height: 60%;
+}
+#ad{
+	margin-right: 100px;
+}
+
+</style>
+</body>
+</html>
