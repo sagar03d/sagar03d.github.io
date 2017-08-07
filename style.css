@@ -1,5 +1,9 @@
 body{
         background-image:url("bg.jpg");
+	padding:0px;
+	margin:0px;
+	height:0px;
+	width: 1000px;
 }
 
 h1{
@@ -40,8 +44,8 @@ img{
 }
 hr{
 	margin-top: -10px;
-	margin-right: 450px;
-	margin-left: 420px;
+	margin-right: 120px;
+	margin-left: 410px;
 }
 #select{
     margin-left:500px;
@@ -119,9 +123,4 @@ footer{
 	position: relative;
 	bottom: 30px;
 	left: 40px;
-}
-#time{
-	position: relative;
-	left: 80%;
-	bottom: 50px;
 }
