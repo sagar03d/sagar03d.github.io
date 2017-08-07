@@ -3,7 +3,7 @@ body{
 	padding:0px;
 	margin:0px;
 	height:0px;
-	width: 1000px;
+	width: 80%;	
 }
 
 h1{
@@ -44,11 +44,11 @@ img{
 }
 hr{
 	margin-top: -10px;
-	margin-right: 120px;
+	margin-right: 20%;
 	margin-left: 410px;
 }
 #select{
-    margin-left:500px;
+    padding-left: 50%;
     font-family: sans-serif;
 }
 h2{
