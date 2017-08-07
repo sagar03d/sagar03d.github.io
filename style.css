@@ -109,3 +109,19 @@ hr.style1{
 	margin-top:20px;
 	margin-left:540px;
 }
+footer{
+	font-family: sans-serif;
+	padding-top: 5px;
+	margin-left: 40%;
+	color: #222;
+}
+#follow{
+	position: relative;
+	bottom: 30px;
+	left: 40px;
+}
+#time{
+	position: relative;
+	left: 80%;
+	bottom: 50px;
+}
