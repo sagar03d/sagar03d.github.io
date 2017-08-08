@@ -1,11 +1,24 @@
+.circle {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+}
 body{
         background-image:url("bg.jpg");
 	padding:0px;
 	margin:0px;
 	height:0px;
-	width: 80%;	
+	width: 1000px;
 }
-
 h1{
         alignment: center;
         margin-top: 5px;
@@ -14,10 +27,10 @@ h1{
         margin-left: 80px;
 }
 
-img{
+#img{
         border-radius:100%;
-        margin-top: 1px;
-        margin-left:550px;
+        margin-top: -4%;
+        margin-left:260px;
 }
 #q1{
 	font-size: 16pt;
@@ -44,11 +57,11 @@ img{
 }
 hr{
 	margin-top: -10px;
-	margin-right: 20%;
+	margin-right: 120px;
 	margin-left: 410px;
 }
 #select{
-    padding-left: 50%;
+    margin-left:520px;
     font-family: sans-serif;
 }
 h2{
