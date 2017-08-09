@@ -6,22 +6,31 @@
 <div id="main">
 	<meta name="viewport" content="width=450, maximum-scale=1"/>
 	<link rel="stylesheet" href="style.css"/>
+	<script src="main.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<script src="main.js"></script>
 <base target="_blank">
 <title>sagar03d.com</title>
 </head>
-<body>
+<body onload="time()">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <i class="material-icons">computer</i>
 <br>
 <div id="img">
 <div class="circle" style="background-image: 
-       url('https://sagar03d.github.io/sagar.jpg')">
+       url('sagar.jpg')">
 </div>
 </div>
-           <label><h2>Sagar Dolui</h2></label>
+           <h2 id="mv">Sagar Dolui</h2>
 <hr class="style1">
 <b><label><p id="q1">Technical Qualification</p></b></label>
 <label><p id="p2">C, C++, JAVA, PYTHON, VISUAL BASIC, HTML, CSS, MYSQL, DATA STRUCTURE</p></label>
@@ -30,6 +39,7 @@
 <select name="projects" id="pro" style="width: 36% !important;">
 <option value="" selected>Select Project</option>
 <option value="/ejobindia/form.html">Ragistration Form</option>
+<option value="/ejobindia/add.html">JavaScript Addition</option>
 </select>
 <input type="button" name="submit" value="Check" onClick="window.open(projects.value,'newtab'+projects.value)">
 </form>
@@ -37,14 +47,23 @@
      <a class="typeform-share button" href="https://sagar158.typeform.com/to/iBLuqe" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:35px;text-align:center;margin:0;height:35px;padding:0px 23px;border-radius:16px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Contact me </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
   </p>
 </div>
-<div id="social-button">
-<a href="https://www.facebook.com/Sagar03sen" target="_blank" class="fa fa-facebook"></a>
-<a href="https://twitter.com/b1nary_b0y" class="fa fa-twitter"></a>
-<a href="https://plus.google.com/113867835684858605241" class="fa fa-google"></a>
-<a href="https://www.linkedin.com/in/sagar03d/" class="fa fa-linkedin"></a><br>
+<div id="social">
+<a href="https://facebook.com/sagar03sen"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="https://facebook.com/sagar03sen"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<a href="https://facebook.com/sagar03sen"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+<a href="https://facebook.com/sagar03sen"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a href="https://facebook.com/sagar03sen"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 </div>
 <div id="follow">
 <a href="https://twitter.com/b1nary_b0y" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true">Follow @b1nary_b0y</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+<div id="fb">
+<div class="fb-follow" data-href="https://www.facebook.com/sagar03sen" data-layout="button_count" data-size="small" data-show-faces="true"></div>
+</div>
+<div id="time">
+<span id="t" style="color: #ffffff">Time: </span>
+</div>
+</div>
 </body>
 </html>
+

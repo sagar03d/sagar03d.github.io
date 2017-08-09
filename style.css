@@ -12,6 +12,7 @@
   border: 5px solid #eee;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 }
+
 body{
         background-image:url("bg.jpg");
 	padding:0px;
@@ -19,30 +20,23 @@ body{
 	height:0px;
 	width: 1000px;
 }
-h1{
-        alignment: center;
-        margin-top: 5px;
-        margin-bottom: 1px;
-        margin-right: 150px;
-        margin-left: 80px;
-}
 
 #img{
         border-radius:100%;
-        margin-top: -4%;
-        margin-left:260px;
+        margin-top: -25pt;
+        padding-left:260px;
 }
 #q1{
 	font-size: 16pt;
-	margin-top: 40px;
-	margin-left:530px;
+	padding-top: 14px;
+	padding-left:500px;
 	color: #8baeaf;
 	font-family: sans-serif;
 }
 #q2{
 	font-size: 15pt;
 	color: #8baeaf;
-	margin-left: 570px;
+	padding-left: 550px;
 	font-family: sans-serif;
 }
 #p2{
@@ -56,12 +50,12 @@ h1{
 	margin-right: 70px;
 }
 hr{
-	margin-top: -10px;
+	margin-top: -14px;
 	margin-right: 120px;
 	margin-left: 410px;
 }
 #select{
-    margin-left:520px;
+    margin-left:480px;
     font-family: sans-serif;
 }
 h2{
@@ -71,22 +65,6 @@ h2{
 	font-family: sans-serif;
 	-webkit-transition: width 2s;
 	transition: width 2s;
-}
-#contact{
-	margin-top: 70px;
-	margin-left: 530px;
-}
-#main{
-	margin-left: 30px;
-}
-hr.style1{
-	border-top: 2px solid #8c8b8b;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-/* here come styles from mobile-retina.css */
-	img{
-	border-radius: 50%;	
-}
 }
 
 .fa {
@@ -107,13 +85,17 @@ hr.style1{
   background: #3B5998;
   color: white;
 }
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
 
 .fa-twitter {
   background: #55ACEE;
   color: white;
 }
 
-.fa-google {
+.fa-google-plus {
   background: #dd4b39;
   color: white;
 }
@@ -122,9 +104,24 @@ hr.style1{
   background: #007bb5;
   color: white;
 }
-#social-button{
-	margin-top:20px;
-	margin-left:540px;
+.fa-github {
+  background: #007bb5;
+  color: white;
+}
+#contact{
+	margin-top: 70px;
+	margin-left: 530px;
+}
+#main{
+	margin-left: 30px;
+}
+hr.style1{
+	border-top: 2px solid #8c8b8b;
+}
+#social{
+	position: relative;
+	top:50px;
+	padding-left:52%;	
 }
 footer{
 	font-family: sans-serif;
@@ -136,4 +133,14 @@ footer{
 	position: relative;
 	bottom: 30px;
 	left: 40px;
+}
+#fb{
+	padding-left:900pt;
+	margin-top: -65px;
+}
+#time{
+	font-family: sans-serif;
+	font-color: #ffffff;
+	padding-left: 59%;
+	padding-top: -6%;
 }
