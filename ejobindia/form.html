@@ -7,11 +7,21 @@
 	<br>
 <h1>Ragistration</h1>
 <hr></hr><br><br>
-<form action="" method="post">
-Fisrt Name <input type="text" name="fname" id="fn" required><br><br>
-Last Name <input type="text" name="lname" id="ln" required><br><br>
+<form action="" method="post" onsubmit="return vd_chk()">
+Fisrt Name <input type="text" name="fname" id="fn"><br><br>
+Last Name <input type="text" name="lname" id="ln"><br><br>
+Email: <input type="text" id="em" onblur="validation()"><br><br>
 <div id="ad">Address <textarea rows="5" cols="20"></textarea></div><br><br>
-Password <input type="password" name="pass" id="pass" required><br><br>
+Password <input type="password" name="pass" id="pass"><br><br>
+City <select name="city" id="cn" onchange="change()">
+<option value="">Select</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Delhi">Delhi</option>
+<option value="Pune">Pune</option>
+<option value="Chennai">Chennai</option>
+<option value="Kolkata">Kolkata</option>
+<option value="oth">Other</option>
+</select><input type="text" id="cty" style="display: none;"><br><br>
 Skills<label><input type="checkbox" name="sk[]" id="c" value="C">C</label> 
 	<label><input type="checkbox" name="sk[]" id="cpp" value="CPP">C++</label>
 	<label><input type="checkbox" name="sk[]" id="php" value="PHP">PHP</label>
@@ -20,14 +30,6 @@ Skills<label><input type="checkbox" name="sk[]" id="c" value="C">C</label>
 Gender <label><input type="radio" name="gen" id="m" value="male">Male</label>
 	<label><input type="radio" name="gen" id="f" value="female">Female</label>
 	<label><input type="radio" name="gen" id="o" value="other">Other</label><br><br>
-City <select name="city" id="city">
-<option value="">Select</option>
-<option value="Mumbai">Mumbai</option>
-<option value="Delhi">Delhi</option>
-<option value="Pune">Pune</option>
-<option value="Chennai">Chennai</option>
-<option value="Kolkata">Kolkata</option>
-</select><br><br>
 Upload <input type="file" name="filename" id="upload"><br><br>
 <input type="submit" name="sbmit" id="sub" value="Submit">
 <input type="reset" name="res" id="rest" value="Reset">
@@ -44,5 +46,48 @@ Upload <input type="file" name="filename" id="upload"><br><br>
 }
 
 </style>
+<script>
+	function vd_chk(){
+		var a,b,c,d,e,g;
+		a = document.getElementById("fn").value;
+		b = document.getElementById("ln").value;
+		c = document.getElementById("ad").value;
+		d = document.getElementById("pass").value;
+		e = document.getElementById("cn").value;
+		g = document.getElementById("upload").value;
+		if(a=="" || b=="" || c=="" || d=="" || e==""|| g==""){
+			alert("Please fillup your form");
+			return false;
+		}
+		if(e=="oth"){
+			var f;
+			f = document.getElementById("cty").value;
+			if(f==""){
+				alert("Please Enter your city name");
+				return false;
+			}
+		}
+	}
+	function change(){
+		var a;
+		a = document.getElementById("cn").value;
+		if(a=='oth'){
+			document.getElementById("cty").style.display="block";
+		}
+		else{
+			document.getElementById("cty").style.display="none";
+		}
+	}
+	function validation(){
+		var a, at, dot;
+		a = document.getElementById("em").value;
+		at = a.indexOf("@");
+		dot = a.lastIndexOf(".");
+		if(at<1 || dot<at+2 || dot+1>=a.length){
+
+			alert("Enter a valid email");
+		}
+	}
+</script>
 </body>
 </html>
