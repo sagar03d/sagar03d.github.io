@@ -1,0 +1,62 @@
+<html>
+<body><center>
+	<input type="button" id="green" value="green" onclick="color(this.id)">
+	<input type="button" id="red" value="red" onclick="color(this.id)">
+	<input type="button" id="yellow" value="yellow" onclick="color(this.id)">
+	<input type="button" id="grey" value="grey" onclick="color(this.id)"><p>Onclick</p>
+	<br><br><input type="text" id="code" onblur="change()"><p>onblur</p><br><br>
+	<input type="submit" id="sub" style="height: 50px; width:70px;" value="Submit" onmouseover="submit()"><p>onmouseover</p> <br><br><span id="te" style="font-size: 50px;"></span>
+	</center>
+	<style>
+	#green{
+		height: 50px;
+		width: 50px;
+		background-color: green;
+	}
+	#red{
+		height: 50px;
+		width: 50px;
+		background-color: red;
+	}
+	#yellow{
+		height: 50px;
+		width: 50px;
+		background-color: yellow;
+	}
+	#grey{
+		height: 50px;
+		width: 50px;
+		background-color: grey;
+	}
+	</style>
+	<script type="text/javascript">
+		function color(obj){
+			var a= obj;
+			if(a=="green"){
+			document.body.style.backgroundColor="green";
+		}
+		if(a=="red")
+		{
+			document.body.style.backgroundColor="red";
+		}
+		if(a=="yellow"){
+			document.body.style.backgroundColor="yellow";
+		}
+		if(a=="grey"){
+			document.body.style.backgroundColor="#222";
+		}
+		}
+
+		function change(){
+			var a;
+			a = document.getElementById("code").value;
+			document.body.style.backgroundColor=a;
+			document.getElementById("te").innerHTML="Blur";
+		}
+
+		function submit(){
+			document.getElementById("te").innerHTML="---MouseOver Event Activated---";
+		}
+	</script>
+</body>
+</html>
