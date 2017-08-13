@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $('#main').fadeIn(1200);
+});
+
 function time(){
 	time = new Date();
 

@@ -1,3 +1,7 @@
+#main{
+	display: none;
+	margin-left: 30px;
+}
 .circle {
   display: block;
   width: 150px;
@@ -15,7 +19,6 @@
 
 body{
         background-image:url("bg.jpg");
-	background-repeat: no-repeat;
 	padding:0px;
 	margin:0px;
 	height:0px;
@@ -114,9 +117,7 @@ h2{
 	margin-top: 70px;
 	margin-left: 530px;
 }
-#main{
-	margin-left: 30px;
-}
+
 hr.style1{
 	border-top: 2px solid #8c8b8b;
 }
