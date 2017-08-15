@@ -16,3 +16,14 @@ function hello(){
 function bye(){
 		document.getElementById("mv").innerHTML = "Sagar Dolui";
 }
+
+function check(){
+	var elm;
+	elm = document.getElementById("pro").value;
+	if(elm==""){
+		alert("Please select a project");
+	}
+	else{
+		window.open(elm,'newtab'+elm);
+	}
+}
