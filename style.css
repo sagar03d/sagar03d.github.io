@@ -16,6 +16,10 @@
   border: 5px solid #eee;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
 }
+.circle:hover{
+	opacity: 0.5; 
+	filter: alpha(opacity=30);
+}
 
 body{
         background-image:url("bg.jpg");
