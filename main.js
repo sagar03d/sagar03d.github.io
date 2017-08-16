@@ -1,5 +1,11 @@
 $(document).ready(function() {
-    $('#main').fadeIn(1200);
+    $('#main').fadeIn(2000);
+    $("#mv").mouseover(function(){
+    	$("#mv").html("Hello Visitor!");
+    });
+    $("#mv").mouseout(function(){
+    	$("#mv").html("Sagar Dolui");
+    });
 });
 
 function time(){
@@ -9,12 +15,6 @@ var hh = time.getHours();
 var mm = time.getMinutes();
 var ss = time.getSeconds() 
 document.getElementById("t").innerHTML = hh + ":" + mm + ":" + ss;
-}
-function hello(){
-		document.getElementById("mv").innerHTML = "Hello Visitor!";
-}
-function bye(){
-		document.getElementById("mv").innerHTML = "Sagar Dolui";
 }
 
 function check(){
