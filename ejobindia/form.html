@@ -13,11 +13,11 @@
 <form id="frm" method="post">
 Fisrt Name:<input type="text" name="fname" placeholder="Enter First Name" id="fn"> <span id="s1" style="color:#ffffff;"></span><br><br>
 Last Name <input type="text" name="lname" placeholder="Enter Last Name" id="ln"> <span id="s2" style="color:#ffffff;"></span><br><br>
-Email: <input type="text" id="em" placeholder="Enter a valid email" onblur="validation()"> <span id="s3" style="color:#ffffff;"></span><br><br>
+Email: <input type="text" id="em" placeholder="Enter a valid email"> <span id="s3" style="color:#ffffff;"></span><br><br>
 DOB: <input type="text" id="db" name="date"> <span id="s4" style="color:#ffffff;"></span><br><br>
 <div id="ad">Address <textarea rows="5" cols="20"></textarea></div><br><br>
 Password <input type="password" name="pass" id="pass"> <span id="s5" style="color:#ffffff;"></span><br><br>
-City <select name="city" id="cn" onchange="change()">
+City <select name="city" id="cn">
 <option value="">Select</option>
 <option value="Mumbai">Mumbai</option>
 <option value="Delhi">Delhi</option>
@@ -27,14 +27,14 @@ City <select name="city" id="cn" onchange="change()">
 <option value="oth">Other</option>
 </select> <span id="s6"></span>
 <input type="text" id="cty" placeholder="Enter your city name" style="display: none;"> <span id="s7" style="color:#ffffff;"></span><br><br>
-Skills<label><input type="checkbox" name="sk" id="c" value="C">C</label> 
-	<label><input type="checkbox" name="sk" id="c" value="CPP">C++</label>
-	<label><input type="checkbox" name="sk" id="c" value="PHP">PHP</label>
-	<label><input type="checkbox" name="sk" id="c" value="IOS">IOS</label>
-	<label><input type="checkbox" name="sk" id="c" value="ANDROID">ANDROID</label><br><br>
+Skills<label><input type="checkbox" name="sk[]" id="c" value="C">C</label> 
+	<label><input type="checkbox" name="sk[]" id="cpp" value="CPP">C++</label>
+	<label><input type="checkbox" name="sk[]" id="php" value="PHP">PHP</label>
+	<label><input type="checkbox" name="sk[]" id="ios" value="IOS">IOS</label>
+	<label><input type="checkbox" name="sk[]" id="andr" value="ANDROID">ANDROID</label> <span id="s9" style="color:#ffffff;"></span><br><br>
 Gender <label><input type="radio" name="gen" id="m" value="male">Male</label>
 	<label><input type="radio" name="gen" id="f" value="female">Female</label>
-	<label><input type="radio" name="gen" id="o" value="other">Other</label><br><br><br>
+	<label><input type="radio" name="gen" id="o" value="other">Other</label> <span id="s10" style="color:#ffffff;"></span><br><br><br>
 Upload <input type="file" name="filename" id="upload"> <span id="s8" style="color:#ffffff;"></span><br><br><br><br>
 <input type="submit" name="sbmit" id="sub" value="Submit" style="background-color: #222; border:#ffffff; border-radius: 6px; font-size: 26px;">
 <input type="reset" name="res" id="rest" value="Reset" style="background-color: #222; border:#ffffff; border-radius: 6px; font-size: 26px;">
@@ -53,9 +53,27 @@ Upload <input type="file" name="filename" id="upload"> <span id="s8" style="colo
 </style>
 <script>
 		$(document).ready(function(){
-			var id;
+
 			$("#db").datepicker();
 			$("#sub").click(function(){
+
+				var flag=0, flag1=0;
+				var skill = $('[name="sk[]"]');
+				for(var i=0;i<skill.length;i++){
+					if(skill[i].checked){
+						flag++;
+						$("#s9").html("");
+					}
+				}
+
+				var gender = $('[name="gen"]');
+				for(var j=0;j<gender.length;j++){
+					if(gender[j].checked){
+						flag1++;
+						$("#s10").html("");
+					}
+				}
+
 				if($("#fn").val()==""){
 				$("#s1").html("Please Enter First Name");
 				$("#fn").focus();
@@ -87,17 +105,28 @@ Upload <input type="file" name="filename" id="upload"> <span id="s8" style="colo
 				$("#s6").html("Please Select a city");
 				$("#cn").focus();
 				return false;}
-
-				if($("#cn").val()=="oth"){
-				$("#s7").html("Please Enter your city name");
+				
+				if($("#cn").val()=='oth'){
+				$("#s7").html("Please Write a city");
 				$("#cty").focus();
 				return false;}
+
+				if(flag==0){
+					$("#s9").html("Please check a box");
+					return false;
+				}
+
+				if(flag1==0){
+					$("#s10").html("Please Select a gender");
+					return false;
+				}
 
 				if($("#upload").val()==""){
 				$("#s8").html("Please Upload a picture");
 				$("#upload").focus();
 				return false;}
 
+				
 			});
 
 			$("#fn").blur(function(){
@@ -131,27 +160,28 @@ Upload <input type="file" name="filename" id="upload"> <span id="s8" style="colo
 			$("#upload").blur(function(){
 				$("#s8").html("");
 			});
-			});
-	function change(){
-		var a;
-		a = document.getElementById("cn").value;
-		if(a=='oth'){
-			document.getElementById("cty").style.display="block";
-		}
-		else{
-			document.getElementById("cty").style.display="none";
-		}
-	}
-	function validation(){
-		var a, at, dot;
-		a = document.getElementById("em").value;
-		at = a.indexOf("@");
-		dot = a.lastIndexOf(".");
-		if(at<1 || dot<at+2 || dot+1>=a.length){
 
-			alert("Enter a valid email");
-		}
-	}
+			$("#cn").change(function(){
+				var a = $("#cn").val();
+				if(a=="oth"){
+					$("#cty").show();
+				}
+				else{
+					$("#cty").hide();	
+				}
+			});
+
+		$("#em").blur(function(){
+			var main,at, dot;
+			main = $("#em").val();
+			at = main.indexOf("@");
+			dot = main.lastIndexOf(".");
+			if(at<1 || dot<at+1 || dot+1>=main.length){
+				alert("Please Enter a valid Email");
+			}
+
+		});
+	});
 </script>
 </body>
 </html>
