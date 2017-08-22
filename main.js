@@ -7,10 +7,12 @@ $(document).ready(function() {
     	$("#mv").html("Sagar Dolui");
     });
 });
+function timeupdate(){
+	setInterval("time()",1000);
+}
 
 function time(){
-	time = new Date();
-
+	var time = new Date();
 var hh = time.getHours();
 var mm = time.getMinutes();
 var ss = time.getSeconds() 
