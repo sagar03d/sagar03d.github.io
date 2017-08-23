@@ -12,11 +12,15 @@ function timeupdate(){
 }
 
 function time(){
+	var hour;
 	var time = new Date();
 var hh = time.getHours();
 var mm = time.getMinutes();
 var ss = time.getSeconds() 
-document.getElementById("t").innerHTML = hh + ":" + mm + ":" + ss;
+if(hh>12){
+	hour = hh-12;
+}
+document.getElementById("t").innerHTML = hour + ":" + mm + ":" + ss;
 }
 
 function check(){
