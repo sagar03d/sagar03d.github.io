@@ -20,6 +20,9 @@ var ss = time.getSeconds()
 if(hh>12){
 	hour = hh-12;
 }
+else{
+	hour=hh;
+}
 document.getElementById("t").innerHTML = hour + ":" + mm + ":" + ss;
 }
 
