@@ -17,7 +17,7 @@ function time(){
 var hh = time.getHours();
 var mm = time.getMinutes();
 var ss = time.getSeconds() 
-if(hh>12){
+if(hh>=12){
 	hour = hh-12;
 }
 else{
