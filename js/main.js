@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $('#main').fadeIn(2000);
     $("#mv").mouseover(function(){
     	$("#mv").html("Hello Visitor!");
     });
