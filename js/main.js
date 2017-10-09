@@ -5,6 +5,10 @@ $(document).ready(function() {
     $("#mv").mouseout(function(){
     	$("#mv").html("Sagar Dolui");
     });
+	$.get("https://ipapi.co/json", function(data, status){
+	console.log(data.timezone +'\n'+ data.org +'\n' + data.country_name);
+    });
+
 });
 function timeupdate(){
 	setInterval("time()",1000);
