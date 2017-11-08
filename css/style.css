@@ -6,6 +6,8 @@ html{
 .main{
 	margin-left: 30px;
 }
+select{text-align:center;}
+select .lt { text-align:center; }
 .circle {
   display: block;
   width: 150px;
