@@ -13,7 +13,6 @@ $(document).ready(function() {
 function timeupdate(){
 	setInterval("time()",1000);
 }
-
 function time(){
 	var hour;
 	var time = new Date();
