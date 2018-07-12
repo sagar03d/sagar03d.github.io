@@ -1,0 +1,90 @@
+body {
+    font-family: 'Dosis', 'sans-serif';
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.background {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    border: 0;
+}
+div.outer {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+div.middle {
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0;
+}
+div.inner {
+    width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+div.name {
+    font-weight: 200;
+    font-size: 3em;
+}
+div.summary {
+    font-weight: 200;
+    font-size: 1.4em;
+}
+div.bio {
+    font-size: 1.1em;
+    margin: 30px auto;
+}
+div.line {
+    margin: 30px auto;
+    width: 75%;
+    border-bottom: 1px dotted #DDDDDD;
+}
+div.icons {
+    align-self: center;
+    margin-top: 15%;
+}
+.button {
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #ffffff;
+}
+a:visited {
+    color: #ffffff;
+}
+a:hover {
+    color: #ffffff;
+}
+a:active {
+    color: #ffffff;
+}

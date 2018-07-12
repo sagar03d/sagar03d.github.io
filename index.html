@@ -1,88 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-hight, initial-scale=1">
-	  <link rel="stylesheet" type="text/css" href="css/style.css">
-	  <link rel="stylesheet" type="text/css" href="css/animate.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 	  <script src="js/main.js"></script>
- 	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
- 	  <script type="text/javascript">
- 	      new WOW().init();
- 	  </script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <base target="_blank">
-  <title>sagar03d.com</title>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="http://fonts.googleapis.com/css?family=Dosis:300,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="stylesheet/styles.css"/>
+    <link rel="icon" href="art/icon.png"/>
+
+    <title>Sagar Dolui</title>
+
+    <script language="javascript">
+        function hoverIn(element) {
+            element.style.opacity = 1;
+        }
+
+        function hoverOut(element) {
+            element.style.opacity = 0.7;
+        }
+        function sendEvent(element) {
+            ga('send', 'event', 'open', element.id);
+        }
+    </script>
+   
 </head>
-<body onload="timeupdate()">
-  <div id="feed"></div>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
-  fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110471201-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body>
+    <div class="background">
+        <img src="art/background.jpg"/>
+    </div>
 
-  gtag('config', 'UA-110471201-2');
-</script>
+    <div class="outer">
+    <div class="middle">
+    <div class="inner">
 
-  <div class="main">
-  <i class="material-icons">computer</i>
-  <div id="img">
-  <div class="circle" style="background-image: 
-       url('images/sagar.jpg')">
-  </div>
-  </div>
-  <div class="wow bounce animated" data-wow-delay="2s"><label><h2 id="mv">Sagar Dolui</h2></label></div>
-  <hr class="style1">
-<b><label><p id="q1">Technical Qualification</p></b></label>
-<label><p id="p2">C, C++, PYTHON, HTML, CSS, JAVASCRIPT, JQUERY, PHP, CODEIGNITER, WORDPRESS, DBMS (MYSQL), Yii2, BOOTSTRAP</p></label>
-<b><label><p id="q2">My Projects</p></label></b>
-<form id="select" name="personal_form">
-<select name="projects" id="pro" style="width: 36% !important;">
-<option value="" selected>Select Project</option>
-<option value="http://sagar03d.epizy.com/scrapbook/">Scrapbook Mini Project (Live)</option>
-<option value="https://github.com/sagar03d/scrapbook/">Scrapbook (Code View)</option>
-<option value="">--</option>
-<option value="http://sagar03d.epizy.com/chatbot/">Chatbot (Live)</option>
-<option value="https://github.com/sagar03d/Chatbot-using-Rivescript/">Chatbot (Code View)</option>
-<option value="">--</option>
-<option value="https://github.com/sagar03d/Shopping/">Eshopper (Code View)</option>
-</select>
-<input type="button" name="submit"  onclick="check()" value="Check">
-</form>
-  <p id="contact" style="font-size:11pt;">
-     <a class="typeform-share button" href="https://sagar158.typeform.com/to/iBLuqe" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:35px;text-align:center;margin:0;height:35px;padding:0px 23px;border-radius:16px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Contact me </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-  </p>
-</div>
-<div class="social">
-<a href="https://twitter.com/b1nary_b0y"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-<a href="https://plus.google.com/113867835684858605241"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-<a href="https://github.com/sagar03d"><i class="fa fa-github" aria-hidden="true"></i></a>
-<a href="https://www.linkedin.com/in/sagar03d"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-</div>
-<div id="follow">
-<a href="https://twitter.com/b1nary_b0y" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true">Follow @b1nary_b0y</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<div id="fb">
-<div class="fb-follow" data-href="https://www.facebook.com/sagar03sen" data-layout="button_count" data-size="small" data-show-faces="true"></div>
-</div>
-<div id="time">
-<span id="t" style="color: #ffffff"></span>
-</div>
-</div>
-</div>
+        <div class="name">
+            <span style="font-weight: bold;">Sagar</span>&nbsp;<span>Dolui</span>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="summary">
+            <span>Web Developer</span>
+            <br/>
+            <span>Kolkata, India</span>
+        </div>
+
+        <div class="bio">
+            <span>I am a big fan of cutting-edge technologies. Engaged in development of android applications.</span>
+            <br/>
+            <span>Also interested in Internet-of-things and robotics.</span>
+            <br/>
+            <span>I can't imagine my life without traveling, yoga and sport activity.</span>
+        </div>
+
+        <div class="icons">
+            <a href="#"
+               id="cv" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/cv.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+            <a href="http://github.com/sagar03d"
+               id="github" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/github.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+            <a href="#"
+               id="play" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/play.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+            <a href="#"
+               id="medium" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/medium.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+            <a href="https://www.linkedin.com/in/sagar03d"
+               id="linkedin" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/linkedin.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+            <a href="#"
+               id="facebook" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/facebook.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+            <a href="#"
+               id="instagram" onclick="sendEvent(this)">
+                <img class="button" src="art/icons/instagram.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+            </a>
+        </div>
+
+    </div>
+    </div>
+    </div>
 </body>
 </html>
