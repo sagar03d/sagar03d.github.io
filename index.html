@@ -5,9 +5,15 @@
     <link rel="icon" href="#"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110471201-2"></script>
@@ -18,8 +24,54 @@
 
   gtag('config', 'UA-110471201-2');
 </script>
-<script type="text/javascript" src="js/sketch.js"></script>
-    <script type="text/javascript" src="js/Star.js"></script>
+
+<script type="text/javascript">
+	var url = [
+      ['js/starField/sketch.js','js/starField/Star.js'],
+      ['js/flockingSimulation/sketch.js','js/flockingSimulation/vehicle.js']
+  ];
+  
+  $(document).ready(function(){
+    if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+  var a = localStorage.getItem('visit');
+  if(a == null){
+    localStorage.setItem("visit", "0");
+  }
+  else{
+    if(a == 0){localStorage.setItem("visit",'1');}
+    if(a == 1){localStorage.setItem("visit", '0');}
+  }
+} else {
+  // Sorry! No Web Storage support..
+  console.log('localStorage Not Supported');
+}
+    $.get("http://ipinfo.io", function (response) {
+    // console.log(response.ip);
+    }, "jsonp");
+    
+		$.getScript( url[a][0],( jqxhr )=> {
+        console.log( "Load was performed with status "+jqxhr.status );
+      });
+    $.getScript( url[a][1],( jqxhr )=> {
+        console.log( "Load was performed with status "+jqxhr.status );
+      });
+		$('#change').click(()=>{
+			location.reload();
+		});
+    var a = localStorage.getItem('visit');
+    $('#info').mouseover(()=>{
+      if(a == 0){
+        $('#info').prop('title','Inspired by the Flocking Behaviour Simulation');
+      }else{
+        $('#info').prop('title','Inspired by the Star Field');
+      }
+    });
+  });
+
+</script>
+<!-- <script type="text/javascript" src="js/sketch.js"></script> -->
+    <!-- <script type="text/javascript" src="js/Star.js"></script> -->
 
     <title>Sagar Dolui</title>
 
@@ -38,12 +90,9 @@
    
 </head>
 <body style="font-family: "Times New Roman", Times, serif;">
-    <!-- <div class="background">
-        <img src="art/background.jpg"/>
-    </div>
- -->
-
+    
     <div class="outer">
+      <img src="images/icons/info.png" style="height: 25px;" id="info">
     <div class="middle">
     <div class="inner">
 
@@ -66,23 +115,23 @@
         <div class="icons">
             <a href="https://github.com/sagar03d/sagar03d.github.io/raw/master/SAGAR%20DOLUI_CV_V24.11L.pdf"
                id="cv" onclick="sendEvent(this)">
-                <img class="button" src="art/icons/cv.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+                <img class="button" src="images/icons/cv.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
             </a>
             <a href="http://github.com/sagar03d"
                id="github" onclick="sendEvent(this)">
-                <img class="button" src="art/icons/github.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+                <img class="button" src="images/icons/github.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
             </a>
             <a href="#"
                id="play" onclick="sendEvent(this)">
-                <img class="button" src="art/icons/play.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+                <img class="button" src="images/icons/play.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
             </a>
             <a href="#"
                id="medium" onclick="sendEvent(this)">
-                <img class="button" src="art/icons/medium.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+                <img class="button" src="images/icons/medium.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
             </a>
             <a href="https://www.linkedin.com/in/sagar03d"
                id="linkedin" onclick="sendEvent(this)">
-                <img class="button" src="art/icons/linkedin.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
+                <img class="button" src="images/icons/linkedin.png" onMouseOver="hoverIn(this)" onMouseOut="hoverOut(this)"/>
             </a>
         </div>
 
@@ -91,10 +140,7 @@
         <center><b>Technical Knowledge</b></center>
 <marquee behavior="scroll" direction="left" loop="infinite">
 <div class="scroller-container">
-  <div class="scroller"><img class="scroller-img" src="https://ludu-assets.s3.amazonaws.com/course-icons/26/urA5bRhIewsQ2LgxuCu2"/>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-  <img class="scroller-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/2000px-ISO_C%2B%2B_Logo.svg.png"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="scroller">
   <img class="scroller-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2000px-Python-logo-notext.svg.png"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img class="scroller-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Node.js_logo_2015.svg/2000px-Node.js_logo_2015.svg.png"/>
@@ -117,15 +163,24 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img class="scroller-img" src="https://seeklogo.com/images/Y/yii-logo-7A79DB2A59-seeklogo.com.png"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
+<<<<<<< HEAD
+  <img class="scroller-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/LaravelLogo.png"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img class="scroller-img" src="https://www.glitchbusters.co.in/wp-content/uploads/2018/07/mongo-db-design.png"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img class="scroller-img" src="https://discourse-cdn-sjc1.com/business4/uploads/tidyverse/original/2X/d/d7002f298e714c5c946109b596a2166b72d2c40a.png"/>
+=======
   <img class="scroller-img" src="https://seeklogo.com/images/L/laravel-framework-logo-C10176EC8C-seeklogo.com.png"/>
     <img class="scroller-img" src="https://cdn4.iconfinder.com/data/icons/logos-3/426/mysql-512.png"/>
     <img class="scroller-img" src="http://pluspng.com/img-png/logo-mongodb-png-mongodb-logo-anything-but-the-simplest-of-web-applications-requires-a-database-to-store-and-serve-content-from-choosing-the-right-database-and-structuring-413.png"/>
 
 
+>>>>>>> 4d50280de9cb2171d082511c798802ceee6ac2de
   </div>
 </div>
 </marquee>
     </div>
+    <center><a id="change" style="bottom: -43px;" class="waves-effect waves-light btn-small">Change</a></center>
     </div>
 
     </div>
