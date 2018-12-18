@@ -1,7 +1,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link href="http://fonts.googleapis.com/css?family=Dosis:300,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="stylesheet/styles.css"/>
     <link rel="icon" href="#"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -47,10 +47,10 @@
   // Sorry! No Web Storage support..
   console.log('localStorage Not Supported');
 }
-    $.get("http://ipinfo.io", function (response) {
+    // $.get("http://ipinfo.io", function (response) {
     // console.log(response.ip);
-    }, "jsonp");
-    
+    // }, "jsonp");
+    a = localStorage.getItem('visit');
 		$.getScript( url[a][0],( jqxhr )=> {
         console.log( "Load was performed with status "+jqxhr.status );
       });
@@ -60,12 +60,12 @@
 		$('#change').click(()=>{
 			location.reload();
 		});
-    var a = localStorage.getItem('visit');
+    a = localStorage.getItem('visit');
     $('#info').mouseover(()=>{
       if(a == 0){
-        $('#info').prop('title','Inspired by the Flocking Behaviour Simulation');
-      }else{
         $('#info').prop('title','Inspired by the Star Field');
+      }else{
+        $('#info').prop('title','Inspired by the Flocking Behaviour Simulation');
       }
     });
   });
