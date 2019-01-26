@@ -26,52 +26,6 @@
 
   gtag('config', 'UA-110471201-2');
 </script>
-
-<script type="text/javascript">
-	var url = [
-      ['js/starField/sketch.js','js/starField/Star.js'],
-      ['js/flockingSimulation/sketch.js','js/flockingSimulation/vehicle.js']
-  ];
-  
-  $(document).ready(function(){
-    if (typeof(Storage) !== "undefined") {
-  // Code for localStorage/sessionStorage.
-  var a = localStorage.getItem('visit');
-  if(a == null){
-    localStorage.setItem("visit", "0");
-  }
-  else{
-    if(a == 0){localStorage.setItem("visit",'1');}
-    if(a == 1){localStorage.setItem("visit", '0');}
-  }
-} else {
-  // Sorry! No Web Storage support..
-  console.log('localStorage Not Supported');
-}
-    // $.get("http://ipinfo.io", function (response) {
-    // console.log(response.ip);
-    // }, "jsonp");
-    a = localStorage.getItem('visit');
-		$.getScript( url[a][0],( jqxhr )=> {
-        console.log( "Load was performed with status "+jqxhr.status );
-      });
-    $.getScript( url[a][1],( jqxhr )=> {
-        console.log( "Load was performed with status "+jqxhr.status );
-      });
-		$('#change').click(()=>{
-			location.reload(true);
-		});
-    a = localStorage.getItem('visit');
-    $('#info').mouseover(()=>{
-      if(a == 0){
-        $('#info').prop('title','Inspired by the Star Field');
-      }else{
-        $('#info').prop('title','Inspired by the Flocking Behaviour Simulation');
-      }
-    });
-  });
-
-</script>
 <!-- <script type="text/javascript" src="js/sketch.js"></script> -->
     <!-- <script type="text/javascript" src="js/Star.js"></script> -->
 
@@ -219,5 +173,50 @@
   }
 }
 </style>
+<script type="text/javascript">
+	var url = [
+      ['js/starField/sketch.js','js/starField/Star.js'],
+      ['js/flockingSimulation/sketch.js','js/flockingSimulation/vehicle.js']
+  ];
+  
+  $(document).ready(function(){
+    if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+  var a = localStorage.getItem('visit');
+  if(a == null){
+    localStorage.setItem("visit", "0");
+  }
+  else{
+    if(a == 0){localStorage.setItem("visit",'1');}
+    if(a == 1){localStorage.setItem("visit", '0');}
+  }
+} else {
+  // Sorry! No Web Storage support..
+  console.log('localStorage Not Supported');
+}
+    // $.get("http://ipinfo.io", function (response) {
+    // console.log(response.ip);
+    // }, "jsonp");
+    a = localStorage.getItem('visit');
+		$.getScript( url[a][0],( jqxhr )=> {
+        console.log( "Load was performed with status "+jqxhr.status );
+      });
+    $.getScript( url[a][1],( jqxhr )=> {
+        console.log( "Load was performed with status "+jqxhr.status );
+      });
+		$('#change').click(()=>{
+			location.reload(true);
+		});
+    a = localStorage.getItem('visit');
+    $('#info').mouseover(()=>{
+      if(a == 0){
+        $('#info').prop('title','Inspired by the Star Field');
+      }else{
+        $('#info').prop('title','Inspired by the Flocking Behaviour Simulation');
+      }
+    });
+  });
+
+</script>
 </body>
 </html>
