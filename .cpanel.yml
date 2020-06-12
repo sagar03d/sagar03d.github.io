@@ -2,3 +2,4 @@
 deployment:
       tasks:
         - export DEPLOYPATH=/home/invauisb/public_html/dev/sagar03d
+        - /bin/cp -R * $DEPLOYPATH
